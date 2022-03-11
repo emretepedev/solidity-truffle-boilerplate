@@ -6,7 +6,8 @@
     "**/build/*/**": true
   },
   "files.associations": {
-    "*.json": "javascript"
+    "*.json": "javascript",
+    "package.json": "json"
   },
   "files.saveConflictResolution": "overwriteFileOnDisk",
   "editor.quickSuggestions": {
@@ -108,7 +109,6 @@
   "solidity-va.outline.enable": false,
   "solidity-va.deco.arguments": false,
   "solidity-va.deco.statevars": false,
-  "solidity.enabledAsYouTypeCompilationErrorCheck": true,
   "solidity-va.whatsNew.disabled": true,
   "solidity-va.tools.surya.input.contracts": "workspace"
 }
