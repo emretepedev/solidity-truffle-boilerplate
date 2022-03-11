@@ -8,7 +8,9 @@ yarn run start
 yarn run compile
 yarn run migrate
 yarn run deploy
+yarn run console
 yarn run test
+yarn run fresh-test
 yarn run generate-docs
 yarn run format
 yarn run format:json
