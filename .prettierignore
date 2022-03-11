@@ -6,6 +6,7 @@ node_modules
 yarn.lock
 .*ignore
 contracts/artifacts
+contracts/migrations
 .env
 .env.example
 .nvmrc
