@@ -6,6 +6,8 @@
     "pflannery.vscode-versionlens",
     "mikestead.dotenv",
     "syler.ignore",
+    "timonwong.shellcheck",
+    "foxundermoon.shell-format",
     "wayou.vscode-todo-highlight",
     "christian-kohler.path-intellisense",
     "ms-azuretools.vscode-docker",
