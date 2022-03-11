@@ -11,14 +11,14 @@
     "migrate": "truffle migrate",
     "deploy": "truffle deploy",
     "test": "truffle test",
-    "fresh-test": "kill -9 $(lsof -t -i:6545); yarn run start -p 6545 &> /dev/null && yarn run migrate --reset --network fresh_test && yarn run deploy --network fresh_test && yarn run test --network fresh_test && kill -9 $(lsof -t -i:6545);",
-    "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
+    "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
+    "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc && git add docs/; git commit -m 'updated docs' || true",
     "format": "eslint '**/*.{json,js}' --fix; solhint '**/*.sol' --fix; prettier '**/*.{json,js,sol}' --write;",
     "format:json": "eslint '**/*.json' --fix; prettier '**/*.json' --write;",
     "format:js": "eslint '**/*.js' --fix; prettier '**/*.js' --write;",
     "format:sol": "solhint '**/*.sol' --fix; prettier '**/*.sol' --write;",
     "lint": "eslint '**/*.{json,js}'; solhint '**/*.sol'; prettier '**/*.{json,js,sol}' --check;",
-    "hook:pre-push": "eslint '**/*.{json,js}' && solhint '**/*.sol' && prettier '**/*.{json,js,sol}' --check && yarn run fresh-test"
+    "hook:pre-push": "eslint '**/*.{json,js}' && solhint '**/*.sol' && prettier '**/*.{json,js,sol}' --check && yarn run fresh-test && yarn run generate-docs"
   },
   "husky": {
     "hooks": {
