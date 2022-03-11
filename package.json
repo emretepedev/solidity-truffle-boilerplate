@@ -10,6 +10,7 @@
     "compile": "truffle compile",
     "migrate": "truffle migrate",
     "deploy": "truffle deploy",
+    "console": "truffle console",
     "test": "truffle test",
     "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc && git add docs/; git commit -m 'updated docs' || true",
