@@ -85,11 +85,6 @@
         "match": "\\.sol$",
         "cmd": "yarn run solhint ${file} --fix; yarn run prettier ${file} --write;",
         "isAsync": true
-      },
-      {
-        "match": "\\.sol$",
-        "cmd": "yarn run generate-docs",
-        "isAsync": true
       }
     ]
   },
