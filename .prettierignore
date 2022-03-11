@@ -1,0 +1,11 @@
+.git
+.husky
+build
+docs
+node_modules
+yarn.lock
+.*ignore
+contracts/artifacts
+.env
+.env.example
+.nvmrc

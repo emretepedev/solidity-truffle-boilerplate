@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "eamodio.gitlens",
+    "pflannery.vscode-versionlens",
+    "mikestead.dotenv",
+    "syler.ignore",
+    "wayou.vscode-todo-highlight",
+    "christian-kohler.path-intellisense",
+    "ms-azuretools.vscode-docker",
+    "emeraldwalk.runonsave",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+    "rehfres.colored-console-log",,
+    "eg2.vscode-npm-script",
+    "juanblanco.solidity",
+    "hosho.solidity-debugger",
+    "tintinweb.solidity-visual-auditor",
+    "tintinweb.vscode-solidity-language",
+    "tintinweb.graphviz-interactive-preview"
+  ]
+}
