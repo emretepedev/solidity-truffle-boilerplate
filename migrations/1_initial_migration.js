@@ -1,7 +1,7 @@
 require('dotenv').config();
 
-const Migrations = artifacts.require(process.env.CONTRACT_0_NAME);
+const contract_0 = artifacts.require(process.env.CONTRACT_0_NAME);
 
 module.exports = function (deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(contract_0);
 };

@@ -106,6 +106,5 @@
   "solidity-va.deco.statevars": false,
   "solidity.enabledAsYouTypeCompilationErrorCheck": true,
   "solidity-va.whatsNew.disabled": true,
-  "solidity-va.tools.surya.input.contracts": "workspace",
-  "solidity.validationDelay": 3000
+  "solidity-va.tools.surya.input.contracts": "workspace"
 }
