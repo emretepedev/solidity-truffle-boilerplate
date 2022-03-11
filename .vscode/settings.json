@@ -73,17 +73,17 @@
     "commands": [
       {
         "match": "\\.json$",
-        "cmd": "eslint ${file} --fix; prettier ${file} --write;",
+        "cmd": "yarn run eslint ${file} --fix; yarn run prettier ${file} --write;",
         "isAsync": true
       },
       {
         "match": "\\.js$",
-        "cmd": "eslint ${file} --fix; prettier ${file} --write;",
+        "cmd": "yarn run eslint ${file} --fix; yarn run prettier ${file} --write;",
         "isAsync": true
       },
       {
         "match": "\\.sol$",
-        "cmd": "solhint ${file} --fix; prettier ${file} --write;",
+        "cmd": "yarn run solhint ${file} --fix; yarn run prettier ${file} --write;",
         "isAsync": true
       },
       {
@@ -107,6 +107,5 @@
   "solidity.enabledAsYouTypeCompilationErrorCheck": true,
   "solidity-va.whatsNew.disabled": true,
   "solidity-va.tools.surya.input.contracts": "workspace",
-  "solidity.validationDelay": 3000,
-  "nuxt.isNuxtApp": false
+  "solidity.validationDelay": 3000
 }

@@ -22,7 +22,11 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   it('the token name should be correct', async () => {
     const name = await contract_1.name();
 
-    assert.equal(name, process.env.TOKEN_NAME, 'The token name must be valid.');
+    assert.equal(
+      name,
+      process.env.CONTRACT_1_TOKEN_NAME,
+      'The token name must be valid.'
+    );
   });
 
   it('the token symbol should be correct', async () => {
@@ -30,7 +34,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
 
     assert.equal(
       symbol,
-      process.env.TOKEN_SYMBOL,
+      process.env.CONTRACT_1_TOKEN_SYMBOL,
       'The token symbol must be valid.'
     );
   });
@@ -40,7 +44,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
 
     assert.equal(
       decimals,
-      process.env.TOKEN_DECIMAL,
+      process.env.CONTRACT_1_TOKEN_DECIMAL,
       'The token decimal must be valid.'
     );
   });
@@ -50,7 +54,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
 
     assert.equal(
       supply,
-      process.env.TOKEN_SUPPLY,
+      process.env.CONTRACT_1_TOKEN_SUPPLY,
       'The token supply must be valid.'
     );
   });
