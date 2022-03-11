@@ -12,7 +12,8 @@
     "emeraldwalk.runonsave",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint"
-    "rehfres.colored-console-log",,
+    "rehfres.colored-console-log",
+    "abumalick.vscode-nvm",
     "eg2.vscode-npm-script",
     "juanblanco.solidity",
     "hosho.solidity-debugger",
