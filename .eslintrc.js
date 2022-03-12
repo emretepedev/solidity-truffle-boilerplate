@@ -7,9 +7,10 @@ module.exports = {
 
   extends: ['eslint:recommended', 'plugin:json/recommended', 'prettier'],
 
-  plugins: ['json'],
+  plugins: ['json', 'prettier'],
 
   rules: {
+    'prettier/prettier': 'warn',
     'no-undef': 'off',
   },
 };
