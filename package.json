@@ -14,12 +14,12 @@
     "test": "truffle test",
     "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc && git add docs/; git commit -m 'updated docs' || true",
-    "format": "eslint '**/*.{json,js}' --fix; solhint '**/*.sol' --fix; prettier '**/*.{json,js,sol}' --write;",
+    "format": "eslint '**/{*,''}.{json,js}' --fix; solhint '**/*.sol' --fix; prettier '**/{*,''}.{json,js,sol}' --write;",
     "format:json": "eslint '**/*.json' --fix; prettier '**/*.json' --write;",
-    "format:js": "eslint '**/*.js' --fix; prettier '**/*.js' --write;",
+    "format:js": "eslint '**/{*,''}.js' --fix; prettier '**/{*,''}.js' --write;",
     "format:sol": "solhint '**/*.sol' --fix; prettier '**/*.sol' --write;",
-    "lint": "eslint '**/*.{json,js}'; solhint '**/*.sol'; prettier '**/*.{json,js,sol}' --check;",
-    "hook:pre-push": "eslint '**/*.{json,js}' && solhint '**/*.sol' && prettier '**/*.{json,js,sol}' --check && yarn run fresh-test && yarn run generate-docs"
+    "lint": "cspell lint --gitignore '**/{*,''}{.,''}*'; solhint '**/*.sol'; prettier '**/{*,''}.{json,js,sol}' --check; eslint '**/{*,''}.{json,js}';",
+    "hook:pre-push": "cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run generate-docs"
   },
   "husky": {
     "hooks": {
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@openzeppelin/contracts": "^4.5.0",
     "@openzeppelin/test-helpers": "^0.5.15",
+    "cspell": "^5.18.5",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-json": "^3.1.0",

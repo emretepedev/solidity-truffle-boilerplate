@@ -32,6 +32,9 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -45,24 +48,8 @@
     "editor.tabSize": 4
   },
   "cSpell.language": "en",
-  "cSpell.words": ["autoruns", "hdwallet", "nvmrc", "solhint", "trufflesuite"],
-  "cSpell.ignorePaths": [
-    "docs/",
-    "build/",
-    "contracts/artifacts/",
-    "package.json",
-    "package-lock.json",
-    "yarn.lock",
-    "node_modules/",
-    "docker-compose.yml",
-    "Dockerfile",
-    ".git/",
-    ".gitignore",
-    ".dockerignore",
-    ".eslintignore",
-    ".prettierignore",
-    ".vscode/"
-  ],
+  "cSpell.diagnosticLevel": "Warning",
+  "cSpell.enableFiletypes": ["dotenv", "dockerfile", "ignore", "shellscript"],
   "versionlens.caching.duration": 0,
   "versionlens.composer.caching.duration": 0,
   "versionlens.npm.caching.duration": 0,
