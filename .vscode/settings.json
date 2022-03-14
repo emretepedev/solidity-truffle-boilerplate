@@ -21,6 +21,7 @@
   "json.format.enable": false,
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
+  "typescript.format.enable": false,
   "typescript.validate.enable": false,
   "typescript.surveys.enabled": false,
   "[dotenv]": {
@@ -86,6 +87,7 @@
     ]
   },
   "solidity.defaultCompiler": "localNodeModule",
+  "solidity.enabledAsYouTypeCompilationErrorCheck": false,
   "solidity-va.codelens.drawio.enable": false,
   "solidity-va.codelens.funcSigs.enable": false,
   "solidity-va.codelens.uml.enable": false,
