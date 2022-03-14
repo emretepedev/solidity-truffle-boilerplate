@@ -5,11 +5,11 @@ module.exports = {
     // general
     'jscoverage',
     'hdwallet',
-    // README.md
+    // projects
     'emretepedev',
   ],
   ignoreWords: [],
-  ignorePaths: ['yarn.lock'],
+  ignorePaths: ['.gitignore', 'yarn.lock', 'tags*'],
   allowCompoundWords: true,
   dictionaries: [
     'javascript',
