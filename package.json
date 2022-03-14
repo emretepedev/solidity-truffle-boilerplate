@@ -12,6 +12,7 @@
     "deploy": "truffle deploy",
     "console": "truffle console",
     "test": "truffle test",
+    "coverage": "truffle run coverage",
     "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
     "auto-generate-docs": "./checkSolFilesInCommits.sh && yarn run generate-docs && git add docs/; git commit -m 'auto: updated docs' -z &>/dev/null",
@@ -33,19 +34,20 @@
   "devDependencies": {
     "@openzeppelin/contracts": "^4.5.0",
     "@openzeppelin/test-helpers": "^0.5.15",
-    "cspell": "^5.18.5",
-    "eslint": "^8.10.0",
+    "cspell": "^5.19.2",
+    "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "ganache": "^7.0.3",
+    "ganache-cli": "6.12.2",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solc": "0.8.12",
     "solhint": "^3.3.7",
     "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.7.20",
     "solidity-docgen": "^0.5.16",
-    "truffle": "^5.5.3"
+    "truffle": "5.5.4"
   }
 }
