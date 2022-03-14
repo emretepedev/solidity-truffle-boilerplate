@@ -16,3 +16,6 @@ contracts
 .env.example
 .nvmrc
 tags*
+coverage
+coverage.json
+.coverage*

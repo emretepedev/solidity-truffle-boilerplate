@@ -17,3 +17,5 @@ migrations
 *.md
 .nvmrc
 tags*
+coverage
+.coverage*

@@ -82,3 +82,7 @@ sw.*
 build/
 contracts/artifacts/
 contracts/migrations/
+
+# Solcover coverage
+coverage.json
+.coverage*

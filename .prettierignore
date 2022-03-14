@@ -15,3 +15,6 @@ contracts/migrations
 .env
 .env.example
 .nvmrc
+coverage
+coverage.json
+.coverage*
