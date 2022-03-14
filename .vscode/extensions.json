@@ -23,6 +23,7 @@
     "hosho.solidity-debugger",
     "tintinweb.solidity-visual-auditor",
     "tintinweb.vscode-solidity-language",
-    "tintinweb.graphviz-interactive-preview"
+    "tintinweb.graphviz-interactive-preview",
+    "ryanluker.vscode-coverage-gutters"
   ]
 }

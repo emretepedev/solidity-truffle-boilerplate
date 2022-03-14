@@ -67,6 +67,7 @@
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconsFollowCursorOverride": false,
   "errorLens.onSave": true,
+  "coverage-gutters.showLineCoverage": true,
   "emeraldwalk.runonsave": {
     "commands": [
       {
