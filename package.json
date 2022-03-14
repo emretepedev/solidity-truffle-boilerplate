@@ -13,13 +13,14 @@
     "console": "truffle console",
     "test": "truffle test",
     "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
-    "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc && git add docs/; git commit -m 'updated docs' || true",
+    "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
+    "auto-generate-docs": "./checkSolFilesInCommits.sh && yarn run generate-docs && git add docs/; git commit -m 'auto: updated docs' -z &>/dev/null",
     "format": "eslint '**/{*,''}.{json,js}' --fix; solhint '**/*.sol' --fix; prettier '**/{*,''}.{json,js,sol}' --write;",
     "format:json": "eslint '**/{*,''}.json' --fix; prettier '**/{*,''}.json' --write;",
     "format:js": "eslint '**/{*,''}.js' --fix; prettier '**/{*,''}.js' --write;",
     "format:sol": "solhint '**/*.sol' --fix; prettier '**/*.sol' --write;",
     "lint": "cspell lint --gitignore '**/{*,''}{.,''}*'; solhint '**/*.sol'; prettier '**/{*,''}.{json,js,sol}' --check; eslint '**/{*,''}.{json,js}';",
-    "hook:pre-push": "cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run generate-docs"
+    "hook:pre-push": "cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run auto-generate-docs"
   },
   "husky": {
     "hooks": {
