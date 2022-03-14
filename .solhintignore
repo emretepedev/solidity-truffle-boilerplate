@@ -16,3 +16,4 @@ migrations
 *.json
 *.md
 .nvmrc
+tags*
