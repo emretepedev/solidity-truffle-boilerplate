@@ -10,7 +10,11 @@ yarn run migrate
 yarn run deploy
 yarn run console
 yarn run test
+yarn run coverage
 yarn run fresh-test
+yarn run flattener
+yarn run generate-bin
+yarn run generate-abi
 yarn run generate-docs
 yarn run format
 yarn run format:json
