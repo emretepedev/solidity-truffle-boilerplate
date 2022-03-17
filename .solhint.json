@@ -3,7 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "warn",
-    "compiler-version": ["error", "^0.8.12"],
+    "compiler-version": ["error", "^0.8.13"],
     "func-visibility": ["warn", { "ignoreConstructors": true }]
   }
 }
