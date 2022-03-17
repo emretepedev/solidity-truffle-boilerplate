@@ -18,3 +18,4 @@ contracts/migrations
 coverage
 coverage.json
 .coverage*
+solbin

@@ -19,3 +19,4 @@ tags*
 coverage
 coverage.json
 .coverage*
+solbin

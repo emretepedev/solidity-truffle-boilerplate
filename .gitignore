@@ -86,3 +86,4 @@ contracts/migrations/
 # Solcover coverage
 coverage.json
 .coverage*
+solbin

@@ -19,3 +19,4 @@ migrations
 tags*
 coverage
 .coverage*
+solbin
