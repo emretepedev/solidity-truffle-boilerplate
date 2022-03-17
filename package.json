@@ -14,6 +14,7 @@
     "test": "truffle test",
     "coverage": "truffle run coverage --network coverage",
     "fresh-test": "kill -9 $(lsof -t -i:6545); ganache -p 6545 &>/dev/null && truffle migrate --reset --network fresh_test && truffle deploy --network fresh_test && truffle test --network fresh_test",
+    "flattener": "flattener.sh",
     "generate-bin": "solcjs contracts/*.sol --bin --base-path . --include-path node_modules --output-dir solbin/bin",
     "generate-abi": "solcjs contracts/*.sol --abi --base-path . --include-path node_modules --output-dir solbin/abi",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
@@ -50,6 +51,7 @@
     "solhint-plugin-prettier": "^0.0.5",
     "solidity-coverage": "^0.7.20",
     "solidity-docgen": "^0.5.16",
-    "truffle": "^5.5.4"
+    "truffle": "^5.5.4",
+    "truffle-flattener": "^1.6.0"
   }
 }
