@@ -5,6 +5,8 @@ module.exports = {
     // general
     'jscoverage',
     'hdwallet',
+    'solcjs',
+    'lcov',
     // projects
     'emretepedev',
   ],
