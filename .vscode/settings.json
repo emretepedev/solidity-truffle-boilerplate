@@ -81,7 +81,7 @@
         "isAsync": true
       },
       {
-        "match": "\\.sol$",
+        "match": "contracts/.*sol$",
         "cmd": "yarn run solhint ${file} --fix; yarn run prettier ${file} --write;",
         "isAsync": true
       }
