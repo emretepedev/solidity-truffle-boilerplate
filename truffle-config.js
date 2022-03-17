@@ -48,9 +48,16 @@ module.exports = {
       port: process.env.TRUFFLE_PORT, // Standard Ethereum port (default: none)
       network_id: process.env.TRUFFLE_NETWORK_ID, // Any network (default: none)
     },
+
     fresh_test: {
       host: process.env.TRUFFLE_HOST, // Localhost (default: none)
       port: 6545, // Standard Ethereum port (default: none)
+      network_id: process.env.TRUFFLE_NETWORK_ID, // Any network (default: none)
+    },
+
+    coverage: {
+      host: process.env.TRUFFLE_HOST, // Localhost (default: none)
+      port: 4545, // Standard Ethereum port (default: none)
       network_id: process.env.TRUFFLE_NETWORK_ID, // Any network (default: none)
     },
     // Another network with more advanced options...
