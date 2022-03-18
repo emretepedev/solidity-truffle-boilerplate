@@ -20,11 +20,11 @@
     "rehfres.colored-console-log",
     "abumalick.vscode-nvm",
     "eg2.vscode-npm-script",
+    "ryanluker.vscode-coverage-gutters",
     "juanblanco.solidity",
-    "hosho.solidity-debugger",
     "tintinweb.solidity-visual-auditor",
     "tintinweb.vscode-solidity-language",
     "tintinweb.graphviz-interactive-preview",
-    "ryanluker.vscode-coverage-gutters"
+    "trailofbits.slither-vscode"
   ]
 }
