@@ -23,8 +23,8 @@
     "format:json": "eslint '**/{*,''}.json' --fix; prettier '**/{*,''}.json' --write;",
     "format:js": "eslint '**/{*,''}.js' --fix; prettier '**/{*,''}.js' --write;",
     "format:sol": "solhint '**/*.sol' --fix; prettier '**/*.sol' --write;",
-    "lint": "shellcheck bin/*.sh; cspell lint --gitignore '**/{*,''}{.,''}*'; solhint '**/*.sol'; prettier '**/{*,''}.{json,js,sol}' --check; eslint '**/{*,''}.{json,js}';",
-    "hook:pre-push": "shellcheck bin/*.sh && cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run auto-generate-docs"
+    "lint": "shellcheck bin/*; cspell lint --gitignore '**/{*,''}{.,''}*'; solhint '**/*.sol'; prettier '**/{*,''}.{json,js,sol}' --check; eslint '**/{*,''}.{json,js}';",
+    "hook:pre-push": "shellcheck bin/* && cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run auto-generate-docs"
   },
   "husky": {
     "hooks": {
