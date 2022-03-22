@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-if [ -f ".env" ]; then
+if [ -f ".solcrc" ]; then
+  SOLIDITY_VERSION=$(cat .solcrc)
+
+  solc-select install "$SOLIDITY_VERSION"
+  solc-select use "$SOLIDITY_VERSION"
+elif [ -f ".env" ]; then
   source ".env"
 
   solc-select install "$TRUFFLE_SOLIDITY_VERSION"
   solc-select use "$TRUFFLE_SOLIDITY_VERSION"
 else
-  echo "Cannot find .env file. Fix and re-run the 'solcrc.sh'."
+  echo "Cannot find .solcrc or .env file. Fix and re-run the 'solcrc'."
   exit 0
 fi
