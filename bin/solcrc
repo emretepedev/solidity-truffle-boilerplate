@@ -6,6 +6,7 @@ if [ -f ".solcrc" ]; then
   solc-select install "$SOLIDITY_VERSION"
   solc-select use "$SOLIDITY_VERSION"
 elif [ -f ".env" ]; then
+  # shellcheck source=../.env
   source ".env"
 
   solc-select install "$TRUFFLE_SOLIDITY_VERSION"
