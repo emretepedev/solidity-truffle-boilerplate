@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-if [ -f ".solcrc" ]; then
+if [ "$1" ]; then
+  solc-select install "$1"
+  solc-select use "$1"
+elif [ -f ".solcrc" ]; then
   SOLIDITY_VERSION=$(cat .solcrc)
 
   solc-select install "$SOLIDITY_VERSION"
