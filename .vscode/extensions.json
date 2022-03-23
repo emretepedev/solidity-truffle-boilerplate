@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "streetsidesoftware.code-spell-checker",
     "usernamehw.errorlens",
     "eamodio.gitlens",
     "pflannery.vscode-versionlens",
@@ -15,13 +14,15 @@
     "emeraldwalk.runonsave",
     "tht13.html-preview-vscode",
     "shd101wyy.markdown-preview-enhanced",
-    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
     "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
     "rehfres.colored-console-log",
     "abumalick.vscode-nvm",
     "eg2.vscode-npm-script",
     "ryanluker.vscode-coverage-gutters",
     "juanblanco.solidity",
+    "emretepedev.solc-select-vscode",
     "tintinweb.solidity-visual-auditor",
     "tintinweb.vscode-solidity-language",
     "tintinweb.graphviz-interactive-preview",
