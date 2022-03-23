@@ -3,4 +3,4 @@
 installSlither.sh
 installSolcSelect.sh
 
-solcrc.sh
+svm

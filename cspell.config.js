@@ -7,6 +7,7 @@ module.exports = {
     'hdwallet',
     'solcjs',
     'lcov',
+    'svmrc',
     // projects
     'emretepedev',
   ],
