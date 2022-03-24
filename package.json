@@ -19,12 +19,12 @@
     "generate-abi": "solcjs contracts/*.sol --abi --base-path . --include-path node_modules --output-dir solbin/abi",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
     "auto-generate-docs": "checkSolFilesInCommits.sh && yarn run generate-docs && git add docs/ && git commit -m 'auto: updated docs' -z &>/dev/null",
-    "format": "eslint '**/{*,''}.{json,js}' --fix; solhint '**/*.sol' --fix; prettier '**/{*,''}.{json,js,sol}' --write;",
-    "format:json": "eslint '**/{*,''}.json' --fix; prettier '**/{*,''}.json' --write;",
-    "format:js": "eslint '**/{*,''}.js' --fix; prettier '**/{*,''}.js' --write;",
-    "format:sol": "solhint '**/*.sol' --fix; prettier '**/*.sol' --write;",
-    "lint": "shellcheck bin/*; cspell lint --gitignore '**/{*,''}{.,''}*'; solhint '**/*.sol'; prettier '**/{*,''}.{json,js,sol}' --check; eslint '**/{*,''}.{json,js}';",
-    "hook:pre-push": "shellcheck bin/* && cspell lint --gitignore '**/{*,''}{.,''}*' && solhint '**/*.sol' && prettier '**/{*,''}.{json,js,sol}' --check && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run auto-generate-docs"
+    "format": "prettier '**/{*,''}.{json,js,sol}' --write; eslint '**/{*,''}.{json,js}' --fix; solhint '**/*.sol' --fix;",
+    "format:json": "prettier '**/{*,''}.json' --write; eslint '**/{*,''}.json' --fix;",
+    "format:js": "prettier '**/{*,''}.js' --write; eslint '**/{*,''}.js' --fix;",
+    "format:sol": "prettier '**/*.sol' --write; solhint '**/*.sol' --fix;",
+    "lint": "shellcheck bin/*; cspell lint --dot --gitignore '**/{*,''}{.,''}*'; prettier '**/{*,''}.{json,js,sol}' --check; solhint '**/*.sol'; eslint '**/{*,''}.{json,js}';",
+    "hook:pre-push": "shellcheck bin/* && cspell lint --dot --gitignore '**/{*,''}{.,''}*' && prettier '**/{*,''}.{json,js,sol}' --check && solhint '**/*.sol' && eslint '**/{*,''}.{json,js}' && yarn run fresh-test && yarn run auto-generate-docs"
   },
   "husky": {
     "hooks": {

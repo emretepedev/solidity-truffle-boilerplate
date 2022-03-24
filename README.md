@@ -12,10 +12,11 @@ yarn run console
 yarn run test
 yarn run coverage
 yarn run fresh-test
-yarn run flattener
+yarn run generate-flatten
 yarn run generate-bin
 yarn run generate-abi
 yarn run generate-docs
+yarn run auto-generate-docs
 yarn run format
 yarn run format:json
 yarn run format:js

@@ -12,7 +12,7 @@ module.exports = {
     'emretepedev',
   ],
   ignoreWords: [],
-  ignorePaths: ['.gitignore', 'yarn.lock', 'tags*'],
+  ignorePaths: ['.gitignore', 'yarn.lock', 'tags*', '.git', '.vscode'],
   allowCompoundWords: true,
   dictionaries: [
     'javascript',
