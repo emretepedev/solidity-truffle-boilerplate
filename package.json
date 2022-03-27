@@ -18,7 +18,7 @@
     "generate-bin": "solcjs contracts/*.sol --bin --base-path . --include-path node_modules --output-dir solbin/bin",
     "generate-abi": "solcjs contracts/*.sol --abi --base-path . --include-path node_modules --output-dir solbin/abi",
     "generate-docs": "rm -rf docs/; solidity-docgen --solc-module solc",
-    "auto-generate-docs": "checkSolFilesInCommits.sh && yarn run generate-docs && git add docs/ && git commit -m 'auto: updated docs' -z &>/dev/null",
+    "auto-generate-docs": "checkSolFilesInCommits.sh && yarn run generate-docs && git add docs/ && git commit -m 'auto: updated docs' &>/dev/null",
     "format": "prettier '**/{*,''}.{json,js,sol}' --write; eslint '**/{*,''}.{json,js}' --fix; solhint '**/*.sol' --fix;",
     "format:json": "prettier '**/{*,''}.json' --write; eslint '**/{*,''}.json' --fix;",
     "format:js": "prettier '**/{*,''}.js' --write; eslint '**/{*,''}.js' --fix;",
