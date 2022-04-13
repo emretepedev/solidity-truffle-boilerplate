@@ -1,0 +1,5 @@
+{
+  "printers_to_run": "human-summary",
+  "solc_remaps": ["@openzeppelin=node_modules/@openzeppelin"],
+  "filter_paths": "node_modules"
+}
