@@ -7,20 +7,20 @@ const {
   expectRevert, // Assertions for transactions that should fail
 } = require('@openzeppelin/test-helpers');
 
-const _contract_1 = artifacts.require(process.env.CONTRACT_1_NAME);
+const Contract1 = artifacts.require(process.env.CONTRACT_1_NAME);
 
 contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
-  let contract_1;
+  let contract1;
   const value = new BN(1);
 
   // Hook that autoruns before each test function
   beforeEach('should setup the contract instance', async () => {
     // Set the contract
-    contract_1 = await _contract_1.deployed();
+    contract1 = await Contract1.deployed();
   });
 
   it('the token name should be correct', async () => {
-    const name = await contract_1.name();
+    const name = await contract1.name();
 
     assert.equal(
       name,
@@ -30,7 +30,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   });
 
   it('the token symbol should be correct', async () => {
-    const symbol = await contract_1.symbol();
+    const symbol = await contract1.symbol();
 
     assert.equal(
       symbol,
@@ -40,7 +40,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   });
 
   it('the token decimal should be correct', async () => {
-    const decimals = (await contract_1.decimals()).toNumber();
+    const decimals = (await contract1.decimals()).toNumber();
 
     assert.equal(
       decimals,
@@ -50,7 +50,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   });
 
   it('the token supply should be correct', async () => {
-    const supply = (await contract_1.totalSupply()).toNumber();
+    const supply = (await contract1.totalSupply()).toNumber();
 
     assert.equal(
       supply,
@@ -62,7 +62,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   it('reverts when transferring tokens to the zero address', async () => {
     // Conditions that trigger a require statement can be precisely tested
     await expectRevert(
-      contract_1.transfer(constants.ZERO_ADDRESS, value, {
+      contract1.transfer(constants.ZERO_ADDRESS, value, {
         from: sender,
       }),
       'ERC20: transfer to the zero address'
@@ -70,7 +70,7 @@ contract(process.env.CONTRACT_1_NAME, ([sender, receiver]) => {
   });
 
   it('emits a Transfer event on successful transfers', async () => {
-    const receipt = await contract_1.transfer(receiver, value, {
+    const receipt = await contract1.transfer(receiver, value, {
       from: sender,
     });
 
